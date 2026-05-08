@@ -23,19 +23,11 @@ Trained and evaluated on the
 ---
 
 ## Architecture — CRNN
-Input (128, 40) → Log Mel Spectrogram
-↓
-3 × Conv2D blocks (128 filters, 3×3, BatchNorm, ReLU, Dropout 0.3)
-MaxPool2D on frequency axis only → preserves time resolution
-↓
-Reshape → (128, 256)
-↓
-2 × Bidirectional GRU (32 units each direction)
-↓
-TimeDistributed Dense (17, Sigmoid)
-↓
-Output (128, 17) — probability per class per frame 
-Total parameters: ~368,000
+## CRNN Architecture
+
+<p align="center">
+  <img src="assets/Architecture Diagram.png" width="800">
+</p>
 
 ---
 
